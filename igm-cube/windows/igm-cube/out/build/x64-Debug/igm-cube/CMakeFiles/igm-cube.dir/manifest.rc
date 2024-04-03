@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/danyv/source/repos/igm-cube/out/build/x64-Debug/igm-cube/CMakeFiles/igm-cube.dir/embed.manifest"

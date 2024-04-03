@@ -1,0 +1,5 @@
+C:/Users/danyv/source/repos/igm-cube/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/danyv/source/repos/igm-cube/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/danyv/source/repos/igm-cube/out/build/x64-Debug/igm-cube/CMakeFiles/igm-cube.dir
+C:/Users/danyv/source/repos/igm-cube/out/build/x64-Debug/igm-cube/CMakeFiles/edit_cache.dir
+C:/Users/danyv/source/repos/igm-cube/out/build/x64-Debug/igm-cube/CMakeFiles/rebuild_cache.dir
