@@ -66,22 +66,22 @@
 			[
 				{
 					"backtrace" : 3,
-					"define" : "RESOURCES_DIR=\"C:/Users/danyv/source/repos/igm-cube/resources\""
+					"define" : "RESOURCES_DIR=\"C:/Users/danyv/Documents/igm-opengl/igm-cube/windows/igm-cube/resources\""
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/danyv/source/repos/igm-cube/thirdParty/GLEW/include"
+					"path" : "C:/Users/danyv/Documents/igm-opengl/igm-cube/windows/igm-cube/thirdParty/GLEW/include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/danyv/source/repos/igm-cube/thirdParty/GLFW/include"
+					"path" : "C:/Users/danyv/Documents/igm-opengl/igm-cube/windows/igm-cube/thirdParty/GLFW/include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/danyv/source/repos/igm-cube/thirdParty/GLM"
+					"path" : "C:/Users/danyv/Documents/igm-opengl/igm-cube/windows/igm-cube/thirdParty/GLM"
 				}
 			],
 			"language" : "CXX",
@@ -106,17 +106,17 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\..\\..\\thirdParty\\GLEW\\lib\\Release\\x64\\glew32.lib",
+				"fragment" : "C:\\Users\\danyv\\Documents\\igm-opengl\\igm-cube\\windows\\igm-cube\\thirdParty\\GLEW\\lib\\Release\\x64\\glew32.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\..\\..\\thirdParty\\GLFW\\lib\\glfw3.lib",
+				"fragment" : "C:\\Users\\danyv\\Documents\\igm-opengl\\igm-cube\\windows\\igm-cube\\thirdParty\\GLFW\\lib\\glfw3.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\..\\..\\thirdParty\\GLM\\GLM\\lib\\glm.lib",
+				"fragment" : "C:\\Users\\danyv\\Documents\\igm-opengl\\igm-cube\\windows\\igm-cube\\thirdParty\\GLM\\GLM\\lib\\glm.lib",
 				"role" : "libraries"
 			},
 			{

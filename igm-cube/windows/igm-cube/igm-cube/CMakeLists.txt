@@ -44,7 +44,7 @@ endif()
 
 # Specify additional DLLs
 set(ADDITIONAL_DLLS
-    "${GLEW_DIR}/bin/Release/x64/glew32.dll"
+    "${GLEW_DIR}/bin/x64/glew32.dll"
     "${GLFW_DIR}/lib/glfw3.dll"
 )
 

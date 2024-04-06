@@ -55,7 +55,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "igm-cube::@eb6fa7b99bfe17634cb0",
-					"jsonFile" : "target-igm-cube-Debug-5439d0c1255c6d703cb2.json",
+					"jsonFile" : "target-igm-cube-Debug-cbc2a4821ec6e46a9bf8.json",
 					"name" : "igm-cube",
 					"projectIndex" : 0
 				}
@@ -65,12 +65,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/danyv/source/repos/igm-cube/out/build/x64-Debug",
-		"source" : "C:/Users/danyv/source/repos/igm-cube"
+		"build" : "C:/Users/danyv/Documents/igm-opengl/igm-cube/windows/igm-cube/out/build/x64-Debug",
+		"source" : "C:/Users/danyv/Documents/igm-opengl/igm-cube/windows/igm-cube"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 6
 	}
 }
