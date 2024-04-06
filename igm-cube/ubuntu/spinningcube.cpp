@@ -18,6 +18,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include <string>
+#include <iostream>
 
 int gl_width = 640;
 int gl_height = 480;
@@ -70,6 +71,9 @@ int main() {
 
     // Enable Depth test: only draw onto a pixel if fragment closer to viewer
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glDepthFunc(GL_LESS); // set a smaller value as "closer"
 
 
@@ -155,14 +159,21 @@ int main() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-    int width, height, nrChannels;
+    int width = 0, height = 0, nrChannels = 3;
     stbi_set_flip_vertically_on_load(true);
-    std::string imagePath = std::string(RESOURCES_DIR) + "/texture.jpg";
+    std::string imagePath = std::string(RESOURCES_DIR) + "/texture.png";
 
+    
     unsigned char* data = stbi_load(imagePath.c_str(), &width, &height, &nrChannels, 0);
-    if (data) {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
+    if (data && width > 0 && height > 0) {
+        if (nrChannels >= 4) {
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+            glGenerateMipmap(GL_TEXTURE_2D);
+        }
+        else {
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+            glGenerateMipmap(GL_TEXTURE_2D);
+        }
     }
     else {
         printf("Failed to load texture\n");
