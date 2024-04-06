@@ -9,7 +9,7 @@ add_executable (igm-cube "spinningcube.cpp" "stb_image.h")
 # Set the path to the GLEW directory
 set(GLEW_DIR ${CMAKE_SOURCE_DIR}/thirdParty/GLEW)
 # Specify the path to GLEW.lib
-set(GLEW_LIBRARY ${GLEW_DIR}/lib/Release/x64/glew32.lib)
+set(GLEW_LIBRARY ${GLEW_DIR}/lib/x64/glew32.lib)
 
 set(GLFW_DIR ${CMAKE_SOURCE_DIR}/thirdParty/GLFW)
 # Specify the path to GLFW.lib

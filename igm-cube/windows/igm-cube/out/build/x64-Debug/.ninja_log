@@ -1,4 +1,8 @@
 # ninja log v5
 7	14	0	clean	8c45b54705a541e8
-7	1143	7340970660974206	igm-cube/CMakeFiles/igm-cube.dir/spinningcube.cpp.obj	f74a870545f62afe
+8	863	7340976531570565	igm-cube/CMakeFiles/igm-cube.dir/spinningcube.cpp.obj	f74a870545f62afe
 1145	1555	7340970664153341	igm-cube/igm-cube.exe	b2d25b3ea376cddb
+8	17	0	clean	8c45b54705a541e8
+6	14	0	clean	8c45b54705a541e8
+9	857	7340978351017405	igm-cube/CMakeFiles/igm-cube.dir/spinningcube.cpp.obj	f74a870545f62afe
+858	1133	7340978352249689	igm-cube/igm-cube.exe	174bfe1bcf1face1

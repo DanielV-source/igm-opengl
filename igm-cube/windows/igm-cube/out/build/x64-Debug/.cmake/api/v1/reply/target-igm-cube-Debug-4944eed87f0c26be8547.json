@@ -106,7 +106,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "C:\\Users\\danyv\\Documents\\igm-opengl\\igm-cube\\windows\\igm-cube\\thirdParty\\GLEW\\lib\\Release\\x64\\glew32.lib",
+				"fragment" : "C:\\Users\\danyv\\Documents\\igm-opengl\\igm-cube\\windows\\igm-cube\\thirdParty\\GLEW\\lib\\x64\\glew32.lib",
 				"role" : "libraries"
 			},
 			{
