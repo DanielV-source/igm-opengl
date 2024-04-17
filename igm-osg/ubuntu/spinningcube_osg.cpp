@@ -51,12 +51,32 @@ int main(int argc, char* argv[])
     osg::ref_ptr<osg::Group> root (new osg::Group());
     const double translation = 2.2 * loadedModel->getBound().radius();
 
-    // Create the first spinning object
+    // Add new light source
+    osg::ref_ptr<osg::PositionAttitudeTransform> lightPAT(
+            new osg::PositionAttitudeTransform());
+    lightPAT->setPosition(osg::Vec3(5.0, 12.0, 3.0));
+    lightPAT->setScale(osg::Vec3(0.2, 0.2, 0.2));
+    root->addChild(lightPAT);
+
+    // Setup GL_LIGHT1. Leave GL_LIGHT0 as it is by default (enabled)
+    osg::ref_ptr<osg::LightSource> lightSource(new osg::LightSource());
+    lightSource->addChild(loadedModel);
+    lightSource->getLight()->setLightNum(1);
+    lightSource->getLight()->setPosition(osg::Vec4(0.0, 0.0, 0.0, 1.0));
+    lightSource->getLight()->setDiffuse(osg::Vec4(1.0, 1.0, 0.0, 1.0));
+    lightPAT->addChild(lightSource);
+
+    // Enables the light for all children of root, will give a yellowish hue in the back of the cubes
+    osg::ref_ptr<osg::StateSet> ss = root->getOrCreateStateSet();
+    ss->setMode(GL_LIGHT1, osg::StateAttribute::ON);
+
+
+    // Create the original spinning object
     osg::ref_ptr<osg::PositionAttitudeTransform> pat = new osg::PositionAttitudeTransform;
     pat->addChild(loadedModel);
     pat->setUpdateCallback(new SpinCallback);
 
-    // Create the second spinning object
+    // Replicate the spinning object in 2 positions
     osg::ref_ptr<osg::PositionAttitudeTransform> ppat1 = new osg::PositionAttitudeTransform;
     ppat1->addChild(pat);
     ppat1->setPosition(osg::Vec3(0.0, 0.0, 0.0));
