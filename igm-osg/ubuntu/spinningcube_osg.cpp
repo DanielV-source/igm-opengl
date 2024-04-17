@@ -6,7 +6,8 @@
 #include <iostream>
 #include <osgDB/ReadFile>
 #include <osgViewer/Viewer>
-
+#include <osg/Texture2D>
+#include <osg/TexGen>
 #include <osg/MatrixTransform>
 #include <osgGA/TrackballManipulator>
 #include <osg/PositionAttitudeTransform>
@@ -48,6 +49,16 @@ int main(int argc, char* argv[])
         exit(1);
     }
 
+    osg::ref_ptr<osg::StateSet> ss_cube = loadedModel->getOrCreateStateSet();
+
+    osg::ref_ptr<osg::Image> image = osgDB::readImageFile("cube.png");
+    osg::ref_ptr<osg::Texture2D> tex(new osg::Texture2D());
+    tex->setImage(image);
+    ss_cube->setTextureAttributeAndModes(0, tex);
+    osg::ref_ptr<osg::TexGen> texGen(new osg::TexGen());
+    texGen->setPlane(osg::TexGen::S, osg::Plane(0.075, 0.0, 0.0, 0.5));
+    texGen->setPlane(osg::TexGen::T, osg::Plane(0.0, 0.035, 0.0, 0.3));
+    ss_cube->setTextureAttributeAndModes(0, texGen);
     osg::ref_ptr<osg::Group> root (new osg::Group());
     const double translation = 2.2 * loadedModel->getBound().radius();
 
