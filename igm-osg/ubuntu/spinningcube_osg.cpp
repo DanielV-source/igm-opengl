@@ -49,14 +49,25 @@ int main(int argc, char* argv[])
     }
 
     osg::ref_ptr<osg::Group> root (new osg::Group());
+    const double translation = 2.2 * loadedModel->getBound().radius();
 
-    // Wrap the model in a PositionAttitudeTransform to manage transformations
+    // Create the first spinning object
     osg::ref_ptr<osg::PositionAttitudeTransform> pat = new osg::PositionAttitudeTransform;
     pat->addChild(loadedModel);
-    pat->setUpdateCallback(new SpinCallback); // Add the spinning callback
+    pat->setUpdateCallback(new SpinCallback);
 
-    // Add the PAT to the root group
-    root->addChild(pat);
+    // Create the second spinning object
+    osg::ref_ptr<osg::PositionAttitudeTransform> ppat1 = new osg::PositionAttitudeTransform;
+    ppat1->addChild(pat);
+    ppat1->setPosition(osg::Vec3(0.0, 0.0, 0.0));
+
+    osg::ref_ptr<osg::PositionAttitudeTransform> ppat2 = new osg::PositionAttitudeTransform;
+    ppat2->addChild(pat);
+    ppat2->setPosition(osg::Vec3(translation, 0.0, 0.0));
+
+    // Add both spinning objects to the root group
+    root->addChild(ppat1);
+    root->addChild(ppat2);
 
     // Create a viewer, use it to view the model
     osgViewer::Viewer viewer;
