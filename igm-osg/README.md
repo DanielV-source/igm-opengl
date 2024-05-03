@@ -40,4 +40,16 @@ Para facer o cubo mais pequeno escalamos o orixinal dende o PAT con `lightPAT->s
 
 ## V4: Engadir textura(s) ao cubo
 
+- Explicación
+
+Engadimos a seguinte textura ao cubo
+
+![cubo.png](ubuntu/cube.png)
+
+A imaxe ven de este [repositorio](https://github.com/Twinklebear/OpenGL-Wrapper/blob/master/res/cube.png)
+
+Usamos `setTextureAttributeAndModes()` no StateSet do modelo do cubo para engadir as texturas. Seguindo o tutorial vimos que non facia falta usar un `TexGen` para que se vese ben.
+
 - Grafo do exercicio 4
+
+![graphV4.png](graphV4.png)
